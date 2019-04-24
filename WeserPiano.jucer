@@ -12,6 +12,10 @@
       <FILE id="KRt4vN" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="e6saNF" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="NMYXkp" name="PianoSound.cpp" compile="1" resource="0" file="Source/PianoSound.cpp"/>
+      <FILE id="Zi2STk" name="PianoSound.h" compile="0" resource="0" file="Source/PianoSound.h"/>
+      <FILE id="lYSSJF" name="PianoVoice.cpp" compile="1" resource="0" file="Source/PianoVoice.cpp"/>
+      <FILE id="FvaGjc" name="PianoVoice.h" compile="0" resource="0" file="Source/PianoVoice.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
