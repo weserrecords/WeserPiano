@@ -1,0 +1,2 @@
+# WeserPiano
+Piano VSTi Plugin
