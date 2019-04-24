@@ -27,6 +27,16 @@ WeserPianoAudioProcessor::WeserPianoAudioProcessor()
                        )
 #endif
 {
+	pianoSynth.clearVoices();
+
+	for (int i = 0; i < 5; i++)
+	{
+		pianoSynth.addVoice(new PianoVoice());
+	}
+
+	pianoSynth.clearSounds();
+	pianoSynth.addSound(new PianoSound());
+
 }
 
 WeserPianoAudioProcessor::~WeserPianoAudioProcessor()
@@ -98,7 +108,9 @@ void WeserPianoAudioProcessor::changeProgramName (int index, const String& newNa
 //==============================================================================
 void WeserPianoAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-	
+	ignoreUnused(samplesPerBlock);
+	lastSampleRate = sampleRate;
+	pianoSynth.setCurrentPlaybackSampleRate(lastSampleRate);
 }
 
 void WeserPianoAudioProcessor::releaseResources()
@@ -134,6 +146,8 @@ bool WeserPianoAudioProcessor::isBusesLayoutSupported (const BusesLayout& layout
 void WeserPianoAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
 	buffer.clear();
+
+	pianoSynth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
 
 //==============================================================================

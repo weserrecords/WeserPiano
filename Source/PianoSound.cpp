@@ -10,6 +10,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PianoSound.h"
+#include "PianoVoice.h"
 
 PianoSound::PianoSound()
 {
@@ -21,8 +22,10 @@ PianoSound::~PianoSound()
 
 bool PianoSound::appliesToNote(int midiNoteNumber)
 {
+	return true;
 }
 
 bool PianoSound::appliesToChannel(int midiChannel)
 {
+	return true;
 }

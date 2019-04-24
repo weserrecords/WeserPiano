@@ -10,6 +10,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PianoVoice.h"
+#include "PianoSound.h"
 
 PianoVoice::PianoVoice()
 {
@@ -19,52 +20,55 @@ PianoVoice::~PianoVoice()
 {
 }
 
-bool canPlaySound(SynthesiserSound*)
+bool PianoVoice::canPlaySound(SynthesiserSound* sound)
+{
+	return dynamic_cast<PianoSound*>(sound) != nullptr;
+}
+
+void PianoVoice::startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition)
+{
+	frequency = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
+}
+
+void PianoVoice::stopNote(float velocity, bool allowTailOff)
+{
+	clearCurrentNote();
+}
+
+bool PianoVoice::isVoiceActive()
 {
 	return true;
 }
 
-void startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition)
+void PianoVoice::pitchWheelMoved(int newPitchWheelValue)
 {
 }
 
-void stopNote(float velocity, bool allowTailOff)
+void PianoVoice::controllerMoved(int controllerNumber, int newControllerValue)
 {
 }
 
-bool isVoiceActive()
+void PianoVoice::aftertouchChanged(int newAftertouchValue)
+{
+}
+
+void PianoVoice::channelPressureChanged(int newChannelPressureValue)
+{
+}
+
+void PianoVoice::renderNextBlock(AudioBuffer<float>& outputBuffer, int startSample, int numSamples)
+{
+}
+
+void PianoVoice::renderNextBlock(AudioBuffer<double>& outputBuffer, int startSample, int numSamples)
+{
+}
+
+void PianoVoice::setCurrentPlaybackSampleRate(double newRate)
+{
+}
+
+bool PianoVoice::isPlayingChannel(int midiChannel)
 {
 	return true;
-}
-
-void pitchWheelMoved(int newPitchWheelValue)
-{
-}
-
-void controllerMoved(int controllerNumber, int newControllerValue)
-{
-}
-
-void aftertouchChanged(int newAftertouchValue)
-{
-}
-
-void channelPressureChanged(int newChannelPressureValue)
-{
-}
-
-void renderNextBlock(AudioBuffer< float >& outputBuffer, int startSample, int numSamples)
-{
-}
-
-void renderNextBlock(AudioBuffer< double >& outputBuffer, int startSample, int numSamples)
-{
-}
-
-void setCurrentPlaybackSampleRate(double newRate)
-{
-}
-
-bool isPlayingChannel(int midiChannel)
-{
 }

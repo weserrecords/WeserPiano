@@ -10,8 +10,9 @@
 
 #pragma once
 
-class PianoVoice : SynthesiserVoice
+class PianoVoice : public SynthesiserVoice
 {
+public:
 	PianoVoice();
 
 	~PianoVoice();
@@ -32,11 +33,15 @@ class PianoVoice : SynthesiserVoice
 
 	void channelPressureChanged(int newChannelPressureValue);
 
-	void renderNextBlock(AudioBuffer< float >& outputBuffer, int startSample, int numSamples);
+	void renderNextBlock(AudioBuffer<float>& outputBuffer, int startSample, int numSamples);
 
-	void renderNextBlock(AudioBuffer< double >& outputBuffer, int startSample, int numSamples);
+	void renderNextBlock(AudioBuffer<double>& outputBuffer, int startSample, int numSamples);
 
 	void setCurrentPlaybackSampleRate(double newRate);
 
 	bool isPlayingChannel(int midiChannel);
+
+private:
+	double level;
+	double frequency;
 };
