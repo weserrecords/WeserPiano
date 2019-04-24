@@ -9,6 +9,7 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Maximilian/maximilian.h"
 #include "PianoSound.h"
 #include "PianoVoice.h"
 

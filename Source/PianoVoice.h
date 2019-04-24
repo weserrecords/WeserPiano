@@ -44,4 +44,6 @@ public:
 private:
 	double level;
 	double frequency;
+
+	maxiOsc osc1;
 };

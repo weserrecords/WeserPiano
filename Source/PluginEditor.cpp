@@ -9,6 +9,7 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Maximilian/maximilian.h"
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
