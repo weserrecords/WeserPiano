@@ -12,33 +12,6 @@
       <FILE id="KRt4vN" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="e6saNF" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
-      <FILE id="NMYXkp" name="PianoSound.cpp" compile="1" resource="0" file="Source/PianoSound.cpp"/>
-      <FILE id="Zi2STk" name="PianoSound.h" compile="0" resource="0" file="Source/PianoSound.h"/>
-      <FILE id="lYSSJF" name="PianoVoice.cpp" compile="1" resource="0" file="Source/PianoVoice.cpp"/>
-      <FILE id="FvaGjc" name="PianoVoice.h" compile="0" resource="0" file="Source/PianoVoice.h"/>
-      <GROUP id="{37BDF594-532E-4EF9-B570-7AB114BD4242}" name="Maximilian">
-        <GROUP id="{55AEAB41-0F77-FBFC-7450-3054DA4E3C94}" name="libs">
-          <FILE id="meEz0O" name="fft.cpp" compile="1" resource="0" file="Source/Maximilian/libs/fft.cpp"/>
-          <FILE id="tvrNrO" name="fft.h" compile="0" resource="0" file="Source/Maximilian/libs/fft.h"/>
-          <FILE id="Ic69KJ" name="maxiAtoms.cpp" compile="1" resource="0" file="Source/Maximilian/libs/maxiAtoms.cpp"/>
-          <FILE id="sjpjKc" name="maxiAtoms.h" compile="0" resource="0" file="Source/Maximilian/libs/maxiAtoms.h"/>
-          <FILE id="ZvZPFb" name="maxiBark.cpp" compile="1" resource="0" file="Source/Maximilian/libs/maxiBark.cpp"/>
-          <FILE id="kyTbI4" name="maxiBark.h" compile="0" resource="0" file="Source/Maximilian/libs/maxiBark.h"/>
-          <FILE id="EsDoqE" name="maxiFFT.cpp" compile="1" resource="0" file="Source/Maximilian/libs/maxiFFT.cpp"/>
-          <FILE id="zkt9O4" name="maxiFFT.h" compile="0" resource="0" file="Source/Maximilian/libs/maxiFFT.h"/>
-          <FILE id="HlWJWu" name="maxiGrains.cpp" compile="1" resource="0" file="Source/Maximilian/libs/maxiGrains.cpp"/>
-          <FILE id="F7tFrF" name="maxiGrains.h" compile="0" resource="0" file="Source/Maximilian/libs/maxiGrains.h"/>
-          <FILE id="frWtrK" name="maxim.h" compile="0" resource="0" file="Source/Maximilian/libs/maxim.h"/>
-          <FILE id="MVReOO" name="maxiMFCC.cpp" compile="1" resource="0" file="Source/Maximilian/libs/maxiMFCC.cpp"/>
-          <FILE id="qZBFWS" name="maxiMFCC.h" compile="0" resource="0" file="Source/Maximilian/libs/maxiMFCC.h"/>
-          <FILE id="AVYCXG" name="sineTable.h" compile="0" resource="0" file="Source/Maximilian/libs/sineTable.h"/>
-        </GROUP>
-        <FILE id="EWCvjJ" name="main.cpp" compile="1" resource="0" file="Source/Maximilian/main.cpp"/>
-        <FILE id="Ahpm7l" name="maximilian.cpp" compile="1" resource="0" file="Source/Maximilian/maximilian.cpp"/>
-        <FILE id="kxOxU2" name="maximilian.h" compile="0" resource="0" file="Source/Maximilian/maximilian.h"/>
-        <FILE id="NcVQAi" name="stb_vorbis.c" compile="1" resource="0" file="Source/Maximilian/stb_vorbis.c"/>
-        <FILE id="ozSUA9" name="stb_vorbis.h" compile="0" resource="0" file="Source/Maximilian/stb_vorbis.h"/>
-      </GROUP>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>

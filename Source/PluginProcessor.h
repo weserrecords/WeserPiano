@@ -62,4 +62,6 @@ private:
 	Synthesiser pianoSynth;
 
 	double lastSampleRate;
+
+	AudioFormatManager audioFormatManager;
 };

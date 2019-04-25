@@ -9,9 +9,6 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "Maximilian/maximilian.h"
-#include "PianoSound.h"
-#include "PianoVoice.h"
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -30,15 +27,18 @@ WeserPianoAudioProcessor::WeserPianoAudioProcessor()
 {
 	pianoSynth.clearVoices();
 
-	for (int i = 0; i < 5; i++)
-	{
-		pianoSynth.addVoice(new PianoVoice());
-	}
+	pianoSynth.addVoice(new SamplerVoice());
 
 	pianoSynth.clearSounds();
 
-	pianoSynth.addSound(new PianoSound());
-
+	audioFormatManager.registerBasicFormats();
+	File* file = new File("file.wav");
+	AudioFormatReader* reader = audioFormatManager.createReaderFor(*file);
+	BigInteger allNotes;
+	allNotes.setRange(0, 127, true);
+	pianoSynth.addSound(new SamplerSound("firstSound", *reader, allNotes, 60, 0.0, 0.0, 10.0));
+	delete reader;
+	delete file;
 }
 
 WeserPianoAudioProcessor::~WeserPianoAudioProcessor()
