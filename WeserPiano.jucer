@@ -12,6 +12,8 @@
       <FILE id="KRt4vN" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="e6saNF" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="XCMPxT" name="PianoSynth.cpp" compile="1" resource="0" file="Source/PianoSynth.cpp"/>
+      <FILE id="p9sFbV" name="PianoSynth.h" compile="0" resource="0" file="Source/PianoSynth.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>

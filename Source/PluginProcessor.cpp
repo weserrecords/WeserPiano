@@ -9,6 +9,7 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "PianoSynth.h"
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -25,20 +26,6 @@ WeserPianoAudioProcessor::WeserPianoAudioProcessor()
                        )
 #endif
 {
-	pianoSynth.clearVoices();
-
-	pianoSynth.addVoice(new SamplerVoice());
-
-	pianoSynth.clearSounds();
-
-	audioFormatManager.registerBasicFormats();
-	File* file = new File("file.wav");
-	AudioFormatReader* reader = audioFormatManager.createReaderFor(*file);
-	BigInteger allNotes;
-	allNotes.setRange(0, 127, true);
-	pianoSynth.addSound(new SamplerSound("firstSound", *reader, allNotes, 60, 0.0, 0.0, 10.0));
-	delete reader;
-	delete file;
 }
 
 WeserPianoAudioProcessor::~WeserPianoAudioProcessor()
@@ -117,8 +104,6 @@ void WeserPianoAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
 
 void WeserPianoAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations

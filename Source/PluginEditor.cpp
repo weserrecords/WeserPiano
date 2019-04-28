@@ -9,6 +9,7 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "PianoSynth.h"
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
