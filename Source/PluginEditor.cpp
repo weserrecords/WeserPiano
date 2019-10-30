@@ -25,7 +25,7 @@ WeserPianoAudioProcessorEditor::WeserPianoAudioProcessorEditor (WeserPianoAudioP
 	volumeSlider.setRange(0.0f, 1.0f);
 	volumeSlider.setTextBoxStyle(Slider::TextBoxRight, true, 90, 0);
 	volumeSlider.setPopupDisplayEnabled(true, false, this);
-	volumeSlider.setValue(1.0f);
+	volumeSlider.setValue(0.5f);
 	volumeSlider.addListener(this);
 
 	addAndMakeVisible(&volumeSlider);
