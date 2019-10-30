@@ -25,37 +25,37 @@ void PianoSynth::setup()
 		BigInteger note;
 		note.setRange(i, 1, true);
 
-		File* ppFile = new File("C:/ppSounds/normalized/pp" + s + ".wav");
+		File* ppFile = new File(filePath + "/WeserPiano/ppSounds/pp" + s + ".wav");
 		AudioFormatReader* ppReader = formatManager.createReaderFor(*ppFile);
 		addSound(new SamplerSound("pp" + s, *ppReader, note, i, 0, 0.1, 12));
 		delete ppReader;
 		delete ppFile;
 
-		File* pFile = new File("C:/pSounds/normalized/p" + s + ".wav");
+		File* pFile = new File(filePath + "/WeserPiano/pSounds/p" + s + ".wav");
 		AudioFormatReader* pReader = formatManager.createReaderFor(*pFile);
 		addSound(new SamplerSound("p" + s, *pReader, note, i, 0, 0.1, 12));
 		delete pReader;
 		delete pFile;
 
-		File* mpFile = new File("C:/mpSounds/normalized/mp" + s + ".wav");
+		File* mpFile = new File(filePath + "/WeserPiano/mpSounds/mp" + s + ".wav");
 		AudioFormatReader* mpReader = formatManager.createReaderFor(*mpFile);
 		addSound(new SamplerSound("mp" + s, *mpReader, note, i, 0, 0.1, 12));
 		delete mpReader;
 		delete mpFile;
 
-		File* mfFile = new File("C:/mfSounds/normalized/mf" + s + ".wav");
+		File* mfFile = new File(filePath + "/WeserPiano/mfSounds/mf" + s + ".wav");
 		AudioFormatReader* mfReader = formatManager.createReaderFor(*mfFile);
 		addSound(new SamplerSound("mf" + s, *mfReader, note, i, 0, 0.1, 12));
 		delete mfReader;
 		delete mfFile;
 
-		File* fFile = new File("C:/fSounds/normalized/f" + s + ".wav");
+		File* fFile = new File(filePath + "/WeserPiano/fSounds/f" + s + ".wav");
 		AudioFormatReader* fReader = formatManager.createReaderFor(*fFile);
 		addSound(new SamplerSound("f" + s, *fReader, note, i, 0, 0.1, 12));
 		delete fReader;
 		delete fFile;
 
-		File* ffFile = new File("C:/ffSounds/normalized/ff" + s + ".wav");
+		File* ffFile = new File(filePath + "/WeserPiano/ffSounds/ff" + s + ".wav");
 		AudioFormatReader* ffReader = formatManager.createReaderFor(*ffFile);
 		addSound(new SamplerSound("ff" + s, *ffReader, note, i, 0, 0.1, 12));
 		delete ffReader;

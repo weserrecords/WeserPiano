@@ -43,7 +43,7 @@ void WeserPianoAudioProcessorEditor::paint (Graphics& g)
 
     g.setColour (Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("WeserPiano by Kai Renken", getLocalBounds(), Justification::topLeft, 1);
+    g.drawFittedText ("WeserPiano by weserrecords (2019)", getLocalBounds(), Justification::topLeft, 1);
 }
 
 void WeserPianoAudioProcessorEditor::resized()

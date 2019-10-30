@@ -13,4 +13,6 @@ private:
 	AudioFormatManager formatManager;
 
 	void startPianoSound(int midiChannel, int midiNoteNumber, float velocity, SynthesiserSound* sound);
+
+	String filePath = File::getCurrentWorkingDirectory().getFullPathName();
 };
