@@ -1,14 +1,4 @@
-/*
-  ==============================================================================
-
-    PianoSynth.h
-    Created: 28 Apr 2019 4:12:12pm
-    Author:  Kai
-
-  ==============================================================================
-*/
-
-#pragma once
+# pragma once
 
 class PianoSynth : public Synthesiser
 {
@@ -17,7 +7,10 @@ public:
 
 	void setup();
 
+	void noteOn(int midiChannel, int midiNoteNumber, float velocity);
+
 private:
 	AudioFormatManager formatManager;
 
+	void startPianoSound(int midiChannel, int midiNoteNumber, float velocity, SynthesiserSound* sound);
 };

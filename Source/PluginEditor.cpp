@@ -19,7 +19,16 @@ WeserPianoAudioProcessorEditor::WeserPianoAudioProcessorEditor (WeserPianoAudioP
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 300);
+    setSize (400, 200);
+
+	volumeSlider.setSliderStyle(Slider::LinearHorizontal);
+	volumeSlider.setRange(0.0f, 1.0f);
+	volumeSlider.setTextBoxStyle(Slider::TextBoxRight, true, 90, 0);
+	volumeSlider.setPopupDisplayEnabled(true, false, this);
+	volumeSlider.setValue(1.0f);
+	volumeSlider.addListener(this);
+
+	addAndMakeVisible(&volumeSlider);
 }
 
 WeserPianoAudioProcessorEditor::~WeserPianoAudioProcessorEditor()
@@ -34,11 +43,15 @@ void WeserPianoAudioProcessorEditor::paint (Graphics& g)
 
     g.setColour (Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), Justification::centred, 1);
+    g.drawFittedText ("WeserPiano by Kai Renken", getLocalBounds(), Justification::topLeft, 1);
 }
 
 void WeserPianoAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+	volumeSlider.setBounds(40, 100, 220, 20);
+}
+
+void WeserPianoAudioProcessorEditor::sliderValueChanged(Slider* slider)
+{
+	processor.volume = volumeSlider.getValue();
 }

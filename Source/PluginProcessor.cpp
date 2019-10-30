@@ -26,6 +26,8 @@ WeserPianoAudioProcessor::WeserPianoAudioProcessor()
                        )
 #endif
 {
+	volume = 1.0f;
+	pianoSynth.setup();
 }
 
 WeserPianoAudioProcessor::~WeserPianoAudioProcessor()
@@ -130,11 +132,13 @@ bool WeserPianoAudioProcessor::isBusesLayoutSupported (const BusesLayout& layout
 }
 #endif
 
-void WeserPianoAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
+void WeserPianoAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
 	buffer.clear();
 
 	pianoSynth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
+
+	buffer.applyGain(volume);
 }
 
 //==============================================================================
